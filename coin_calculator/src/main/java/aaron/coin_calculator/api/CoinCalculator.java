@@ -16,7 +16,7 @@ public class CoinCalculator {
 
     @POST
     public String calculateCoins(CoinCalculatorRequest request) {
-        // Check if request body is not empty
+        // Check if target amount and list of denominations is null, or empty
         if (request == null || request.getTargetAmount() == null || request.getCoinDenominations() == null 
                 || request.getCoinDenominations().isEmpty()) {
             return "Invalid request";
@@ -32,7 +32,7 @@ public class CoinCalculator {
         // Create list for coins to be returned after calculations
         List<BigDecimal> coinsUsed = new ArrayList<>(); 
 
-        // Loop the list of available denominations from the biggest one (Greedy Algorithm)
+        // Loop the list of available denominations from the biggest one (For Greedy Algorithm)
         for (BigDecimal denomination : coinDenominations) {
 
             // Check if target amount is more than or equal to the current denomination
