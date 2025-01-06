@@ -4,8 +4,9 @@ How to run app in Docker Container
 ---
 
 1. Go to root directory of the application in the terminal
-2. Build the dockerfile using this command "docker build -t coin_calculator ."
-3. Run the container using this command "docker run -p 8080:8080 coin_calculator"
+2. Run "mvn package"
+3. Build the dockerfile using this command "docker build -t coin_calculator ."
+4. Run the container using this command "docker run -p 8080:8080 coin_calculator"
 
 
 # Coin Calculator Application
